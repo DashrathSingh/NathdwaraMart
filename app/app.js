@@ -55,7 +55,8 @@ app.config(function ($routeProvider) {
 
 });
 
-var serviceBase = 'http://nm.jayeshkabra.in/';
+
+var serviceBase = 'http://nm.myratlam.com/';
 app.constant('ngAuthSettings', {
     apiServiceBaseUri: serviceBase,
     clientId: 'ngAuthApp'
