@@ -49,6 +49,11 @@ app.config(function ($routeProvider) {
         templateUrl: "app/views/train.html"
     });
 
+    $routeProvider.when("/news", {
+        controller: "newsController",
+        templateUrl: "app/views/news.html"
+    });
+
     
 
     $routeProvider.otherwise({ redirectTo: "/login" });

@@ -214,6 +214,12 @@ app.controller('loginController', ['$scope','localStorageService', '$location', 
         $scope.$apply();
     }
 
+    $scope.news = function () {
+
+        $location.path('/news');
+        $scope.$apply();
+    }
+
     
 
 

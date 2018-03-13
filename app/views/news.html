@@ -1,0 +1,110 @@
+﻿
+<style>
+   
+  
+
+    .container {
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    h4 {
+        font-size:21px;
+        
+    }
+
+    p {
+
+        font-size:15px;
+        margin-bottom:5px;
+    }
+
+    .comments-list .comment-body {
+
+        padding-left:70px;
+    }
+    .comments-list li {
+    margin-bottom: 30px;
+}
+
+
+      .comments-list li p {
+    margin-bottom: -1px;
+}
+
+    .fa-search {
+
+        display:none;
+    }
+  
+
+    .avatar {
+    width: 60px;
+    height: 60px;
+    border:2px solid brown;
+}
+    .well {
+        border:transparent;
+        margin-bottom:2px;
+        padding:5px;
+    }
+
+    .darshan {
+       
+    }
+
+    .darshan:first-letter {
+  
+    font-size: 30px;
+    text-transform:uppercase;
+}
+
+    table td {
+         border: 1px solid #dddddd;
+    vertical-align: middle !important;
+    font-size: 15px;
+    }
+     .mainloader {
+        top:45%;
+    }
+
+    .well h4 {
+        font-size:15px;
+        margin-top:7px;
+        margin-bottom:7px;
+    }
+
+     .well p {
+        font-size:13px;
+    }
+
+      .well:nth-child(even) {background: #f9f9f9}
+ .well:nth-child(odd) {background: #FFF}
+   
+</style>
+<div data-ng-if="isload==true || isload=='true'" class="mainloader">
+        <img style="width:60px;" src="img/loader.gif" alt="Alternate Text" />
+    </div>
+<div>
+    <img style="width:100%; max-height:150px; margin-top:6px;" src="img/news.jpg" alt="Alternate Text" />
+
+   
+</div>
+<div data-ng-repeat="obj in Newslist | orderBy : '-CreatedDate'"" class="well">
+
+    <h4> {{obj.Name}}  </h4>
+
+    <p>{{obj.Description}}</p>
+
+    <p style="color:#069; font-size:11px;">{{obj.SourceUrl}} [{{obj.CreatedDate  | jsonDate : 'dd-MMM-yyyy' }}] </p>
+ 
+</div>
+
+
+
+
+
+
+
+
