@@ -81,9 +81,14 @@
 
       .well:nth-child(even) {background: #f9f9f9}
  .well:nth-child(odd) {background: #FFF}
+
+
+   .mainloader {
+        top:45%;
+    }
    
 </style>
-<div data-ng-if="isload==true || isload=='true'" class="mainloader">
+<div data-ng-show="isload==true || isload=='true'" class="mainloader">
         <img style="width:60px;" src="img/loader.gif" alt="Alternate Text" />
     </div>
 <div>

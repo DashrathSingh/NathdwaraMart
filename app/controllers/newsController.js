@@ -1,9 +1,12 @@
 ﻿'use strict';
 app.controller('newsController', ['$scope', 'localStorageService', '$location', 'authService', 'ngAuthSettings', function ($scope, localStorageService, $location, authService, ngAuthSettings) {
 
-
+    $scope.isloader = true;
     $scope.GetNewsLists = function () {
-        $scope.isloader = true;
+      
+      
+
+        debugger;
         $.ajax({
             url: serviceBase + "/api/News/GetNewsData",
             type: 'GET',
@@ -11,9 +14,9 @@ app.controller('newsController', ['$scope', 'localStorageService', '$location', 
             dataType: 'json',
             success: function (result) {
 
-                $scope.isloader = false;
+               
 
-                debugger;
+             
                 $scope.Newslist = result;
 
 
